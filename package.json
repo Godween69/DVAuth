@@ -1,0 +1,19 @@
+{
+  "name": "dvauth",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DV Auth: сервис второго фактора входа (TOTP, запасные коды, подтверждение через Matrix-чат).",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node src/main.js",
+    "migrate": "node src/migrate-cli.js",
+    "test": "node --test \"test/*.test.js\"",
+    "test:db": "node --test \"test/*.integration.js\"",
+    "licenses": "node tools/check-licenses.mjs"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
+}
